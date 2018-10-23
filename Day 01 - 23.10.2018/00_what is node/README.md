@@ -2,7 +2,8 @@
 An app that can parse this technologies:
 * HTML
 * CSS
-* JS
+* JS   
+
 The app gets the content from a server (with a http request) and shows it with GUI 
 
 ## How `browser js` runs in the computer?

@@ -20,8 +20,9 @@ Both are in `window` and in `GLOBAL`
     
 </body>
 </html>
-```
-result:
+``` 
+result:   
+
 ![picture](res0.png)
 
 ## Node version:
@@ -29,5 +30,6 @@ result:
 var d=new Date();
 console.log(d.toLocaleDateString())
 ```
-result:
+result:  
+
 ![picture](res0.png)

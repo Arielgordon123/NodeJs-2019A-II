@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        //define mainFunc function
+        function mainFunc(str, func) {
+            console.log(`--------mainFunc START (str=${str}------------`);
+            func("hello from mainFunc", 100)
+            console.log(`--------mainFunc END---------------------------`);
+        }
+
+
+        //call mainFunc function
+        mainFunc(
+            "first call",
+            function (x, y) { console.log(`first call got : x= ${x}, y= ${y}`) }
+        );
+
+
+        mainFunc(
+            "second call",
+            function (p1, p2) { console.log(`second call got : p1= ${p1}, p2= ${p2}`) }
+        );
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

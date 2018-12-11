@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        button,label{
+            display: inline-block;
+            width:50px;
+            margin:10px;
+        }
+
+        button{
+            width:230px;
+        }
+    </style>
+    <script>
+        function add() {
+
+            let name = document.getElementById("pName").value;
+            let age = document.getElementById("pAge").value;
+
+            let req = new XMLHttpRequest();
+            req.open("POST", "http://localhost:4500/add");
+            req.onreadystatechange = () => {
+                if (req.readyState == 4) {
+                    get();
+                }
+            };
+            req.setRequestHeader("Content-type", "application/json");
+            req.send(JSON.stringify({ "name": name, "age": age }));
+        }
+
+
+        function get() {
+            let req = new XMLHttpRequest();
+            req.open("GET", "http://localhost:4500/all");
+
+            req.onreadystatechange = () => {
+                if (req.readyState == 4) {
+                    let arr = JSON.parse(req.response);
+                    let str = "";
+
+                    for (let i = 0; i < arr.length; i++) {
+                        str += `<li>Name: ${arr[i].name}, Age: ${arr[i].age}</li>`;
+                    }
+
+                    document.getElementById("res").innerHTML = str;
+                }
+            }
+            req.send();
+        }
+    </script>
+</head>
+
+<body onload="get()">
+    <h1>People application</h1>
+
+    <div>
+        <div>
+            <label>Name:</label><input type="text" id="pName" />
+        </div>
+        <div>
+            <label>Age:</label><input type="number" id="pAge" />
+        </div>
+        <div>
+            <button onclick="add()">Add person</button>
+        </div>
+    </div>
+
+    <div>
+        <h2>People list:</h2>
+        <ul id="res"></ul>
+    </div>
+</body>
+
+</html>

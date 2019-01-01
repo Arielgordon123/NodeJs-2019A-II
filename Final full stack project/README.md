@@ -57,29 +57,20 @@ SELECT * FROM `vehicles`;
 02_UIL
 ```
 
-* Add to `00_DAL`, a file named `index.js`, that contains all the generic DDL + DML operations:
-```javascript
-
-```
+* Add to `00_DAL`, a file named `index.js`, that contains all the generic DDL + DML operations
 
 
-* Add to `01_BLL`, a file named `index.js`, that contains all the logic operations (and uses the DAL):
-```javascript
-
-```
+* Add to `01_BLL`, a file named `index.js`, that contains all the logic operations (and uses the DAL)
 
 
-* Add to `02_UIL`, a file named `controller.js`, that contains the express server (and uses the BLL):
-```javascript
 
-```
+* Add to `02_UIL`, a file named `controller.js`, that contains the express server (and uses the BLL)
+
 
 *  Add to `02_UIL`, a new subfolder named `views`
-* Add to `02_UIL/views`, a file named `index.html`, that will be served to the user by the express server:
-```html
-
-```
-
+* Add to `02_UIL/views`, a file named `index.html`, that will be served to the user by the express server
+* Add to `02_UIL/views`, a file named `app.js`, that will be served to the user by the express server
+* Add to `02_UIL/views`, a file named `style.css`, that will be served to the user by the express server
 # How Bll calls DAL (with callbacks)
 ![picture](Bll_to_DAL_(with_callbacks).png)
 

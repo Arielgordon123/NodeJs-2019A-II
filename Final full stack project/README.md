@@ -82,3 +82,10 @@ SELECT * FROM `vehicles`;
 
 # How Bll calls DAL (with callbacks)
 ![picture](Bll_to_DAL_(with_callbacks).png)
+
+# JS to UIL to Bll to DAL (with callbacks)
+![picture](HTML_to_UIL_to_Bll_to_DAL.png)
+
+
+# Callback from UIL to Bll to DAL
+![picture](UIL_to_Bll_to_DAL.png)

@@ -1,9 +1,10 @@
 const mySql = require('mysql');
 
-//-----------------------CONNECT---------------------
 
 // this is a global var - so we can use it in all the functions in this file
 let connection;
+
+
 
 function connect() {
     let connectionConfig = {
@@ -14,7 +15,6 @@ function connect() {
 
     //here we asiggn to the global var - the open connection that we created
     connection = mySql.createConnection(connectionConfig);
-
 }
 
 

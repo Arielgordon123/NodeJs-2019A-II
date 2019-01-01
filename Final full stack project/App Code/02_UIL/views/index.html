@@ -3,8 +3,8 @@
 <head>
     <script>
 
-        function tryConnect(){
-        fetch("/connect")
+        function getAllCars(){
+        fetch("/api/cars")
         .then(res=>res.json())
         .then(body=>console.log(body))
         .catch(ex=>console.log(ex));
@@ -15,6 +15,6 @@
 <body>
    <h1>Hello test</h1>
    
-   <button onclick="tryConnect()">try Connect</button>
+   <button onclick="getAllCars()">try Connect</button>
 </body>
 </html>

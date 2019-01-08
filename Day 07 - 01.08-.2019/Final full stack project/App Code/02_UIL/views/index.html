@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="getAllCars()">
+    <h1>Welcome to our car rental</h1>
+
+    <h2>Get all cars</h2>
+    <table border="1" id="cars"> </table>
+
+
+    <h2>Add new car</h2>
+    <div class="page-wrapper">
+
+
+        <div>
+            <label>veh_reg:</label>
+            <input type="text" id="new_veh_reg" maxlength="8" />
+        </div>
+
+        <div>
+            <label>category:</label>
+            <select id="new_category">
+                <option value="car">car</option>
+                <option value="truck">truck</option>
+            </select>
+        </div>
+
+        <div>
+            <label>brand:</label>
+            <input type="text" id="new_brand" maxlength="30" />
+        </div>
+
+        <div>
+            <label>description:</label>
+            <input type="text" id="new_desc" maxlength="256" />
+        </div>
+
+        <div>
+            <label>daily_rate:</label>
+            <input type="number" id="new_daily_rate" />
+        </div>
+
+        <button onclick="addCar()">Add the car</button>
+    </div>
+
+    <h2>Update car</h2>
+    <div class="page-wrapper">
+
+
+
+        <div>
+            <label>Select the id of the car:</label>
+            <select id="car_update_id"></select>
+        </div>
+        <div>
+            <label>daily_rate:</label>
+            <input type="number" id="edit_daily_rate" />
+        </div>
+        <button onclick="editCar()">Edit the car</button>
+    </div>
+    <h2>Delete car</h2>
+    <div class="page-wrapper">
+
+
+        <div>
+            <label>Select the id of the car:</label>
+            <select id="car_delete_id"></select>
+        </div>
+
+        <button onclick="deleteCar()">Delete the car</button>
+    </div>
+</body>
+
+</html>

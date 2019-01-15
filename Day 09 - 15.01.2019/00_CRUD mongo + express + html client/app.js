@@ -43,14 +43,14 @@ var ProductCollection = mongoose.model("Product", {
 // add a new get request to send to the client with an html page
 app.get("/products",  (request, response)=> {
     response.status(200); 
-    response.sendFile(__dirname+"\\client\\index.html");
+    response.sendFile(__dirname+"/client/index.html");
 });
 
 
 // Add product: 
 app.post("/api/products",  (request, response)=> {
     var product = new ProductCollection(request.body);
-    product.save();
+    product.save();  //saves the new json object in DB
     response.status(201); // Created.
     response.send(product);
 });

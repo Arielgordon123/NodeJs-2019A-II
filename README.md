@@ -3,6 +3,7 @@
 * what is v8
 * node-js VS browser-js
 * what is npm
+* what is module (export + reqire - write a code simple)
 * how to use npm in local folder (npm init)
 * how to install npm packages (npm install -s)
 * what is `package.json` 

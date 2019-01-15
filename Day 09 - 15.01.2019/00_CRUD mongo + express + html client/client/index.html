@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Bike store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="index.js"></script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<h1>Our Products</h1>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">Product list:</h3>
+    <div id="productList" class="row text-center"></div>
+  </div>
+</div>
+ 
+  
+
+  
+
+<!-- Container (Add new product Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Add a new product</h3>
+
+  <div class="row">
+   
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="newname" type="text" >
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="newprice" type="number" >
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit" onclick="addProduct()">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <p>&copy; JB</p> 
+</footer>
+
+</body>
+</html>
